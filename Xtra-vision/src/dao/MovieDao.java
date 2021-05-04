@@ -1,41 +1,34 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dao;
 
 import database.ConnectionDB;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
 import model.Movie;
 
-/**
- *
- * @author brener
- */
 public class MovieDao {
     
-    private Connection connection;
-    int id;
-    String name;
-    float price;
-    
-    public MovieDao(){ 
-        this.connection = new ConnectionDB().getConnection();
-    } 
-    public void check(Movie movie){ 
-        String sql = "SELECT * FROM movies";
-        try { 
-            PreparedStatement stmt = connection.prepareStatement(sql);
-            stmt.setString(1, movie.getName());
-            stmt.setFloat(2, movie.getPrice());
-            stmt.execute();
+    public static ArrayList<Movie> consult(){
+        ArrayList<Movie> movies = new ArrayList<Movie>();
+        try{
+            Connection conn = ConnectionDB.getConnection();
+            String sql = "SELECT * FROM movies";
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            while(rs.next()){
+                Movie m = new Movie();
+                m.setId(rs.getInt("id_movie"));
+                m.setName(rs.getString("name"));
+                m.setPrice(rs.getFloat("price"));
+                movies.add(m);
+            }
             stmt.close();
-        } 
-        catch (SQLException u) { 
-            throw new RuntimeException(u);
-        } 
+            rs.close();
+            
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        return movies;
     }
 }

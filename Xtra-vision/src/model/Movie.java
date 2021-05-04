@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model;
 
-/**
- *
- * @author brener
- */
 public class Movie {
      
    int id;
@@ -36,7 +27,14 @@ public class Movie {
     public void setPrice(float price) {
         this.price = price;
     } 
-       
+
+    @Override
+    public String toString() {
+        return "\n" + "Movie"
+                + "\n" + "id: " + id
+                + "\n" + "name: " + name
+                + "\n" + "price: " + price;
+    }      
 }
 
     

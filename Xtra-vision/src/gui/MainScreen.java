@@ -120,8 +120,8 @@ public class MainScreen extends javax.swing.JFrame {
 
     private void btnRentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRentActionPerformed
         // TODO add your handling code here:
-//        RentMovie RentMovie = new RentMovie();
-//        RentMovie.setVisible(true);
+        RentMovie RentMovie = new RentMovie();
+        RentMovie.setVisible(true);
                 
     }//GEN-LAST:event_btnRentActionPerformed
 
