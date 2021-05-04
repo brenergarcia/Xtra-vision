@@ -264,3 +264,4 @@ public final class RentMovie extends javax.swing.JFrame {
     private javax.swing.JTable tableMovies;
     // End of variables declaration//GEN-END:variables
 }
+teste
