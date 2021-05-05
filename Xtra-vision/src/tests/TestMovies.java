@@ -7,5 +7,6 @@ public class TestMovies {
     public static void main(String[] args) {
         Movie movie = new Movie();
         System.out.println(MovieDao.consult());
+        System.out.println("some change");
     }
 }
