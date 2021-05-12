@@ -40,7 +40,6 @@ public class MainScreen extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(1200, 680));
 
-        backgroundImage1.setBorder(null);
         backgroundImage1.setFont(new java.awt.Font("Bitstream Charter", 1, 48)); // NOI18N
         backgroundImage1.setImg(new ImageIcon("src/images/background.jpeg"));
         backgroundImage1.setPreferredSize(new java.awt.Dimension(1280, 680));
@@ -80,22 +79,19 @@ public class MainScreen extends javax.swing.JFrame {
             backgroundImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backgroundImage1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(backgroundImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(backgroundImage1Layout.createSequentialGroup()
-                        .addComponent(btnRent, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(backgroundImage1Layout.createSequentialGroup()
-                        .addComponent(lblTitle)
-                        .addGap(0, 621, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addGroup(backgroundImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblTitle)
+                    .addComponent(btnRent, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 384, Short.MAX_VALUE)
+                .addComponent(btnReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
         );
         backgroundImage1Layout.setVerticalGroup(
             backgroundImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backgroundImage1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(lblTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 408, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 402, Short.MAX_VALUE)
                 .addGroup(backgroundImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRent, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
