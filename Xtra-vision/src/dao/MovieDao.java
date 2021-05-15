@@ -9,6 +9,7 @@ import model.Movie;
 
 public class MovieDao {
     
+    //method to show the movie's list from the DB to the user in RentMovie page
     public static ArrayList<Movie> consult(){
         ArrayList<Movie> movies = new ArrayList<Movie>();
         try{
@@ -31,4 +32,5 @@ public class MovieDao {
         }
         return movies;
     }
+
 }

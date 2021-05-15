@@ -5,6 +5,7 @@ public class Movie {
    int id;
    public String name;
    public float price;
+   private String customer;
 
     
     public int getId() {
@@ -35,6 +36,20 @@ public class Movie {
                 + "\n" + "name: " + name
                 + "\n" + "price: " + price;
     }      
+
+    /**
+     * @return the customer
+     */
+    public String getCustomer() {
+        return customer;
+    }
+
+    /**
+     * @param customer the customer to set
+     */
+    public void setCustomer(String customer) {
+        this.customer = customer;
+    }
 }
 
     
